@@ -5,7 +5,6 @@ import { APIUSER } from "../helper/api";
 
 export const Login = () => {
   const navigate = useNavigate();
-  const { mensaje, setMensaje } = useState(true);
 
   const {
     register,
@@ -16,7 +15,7 @@ export const Login = () => {
 
   const form = async (data) => {
     const useData = await APIUSER({ data });
-    console.log(useData);
+    
     if (data.email === useData.user && data.password === useData.pass) {
       navigate("/home");
     } else {

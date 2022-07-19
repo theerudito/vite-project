@@ -4,7 +4,7 @@ const url =
   "https://ecovitali.presttoapp.net/Puertto/PostCalidad/Api/api/Login";
 
 export const APIUSER = async ({ data }) => {
-  console.log(data);
+  
   try {
     const res = await axios.get(url, data);
 
