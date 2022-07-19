@@ -49,7 +49,7 @@ export const Login = () => {
               {...register("password", { required: true })}
               name="password"
               type="password"
-              placeholder="12345"
+              placeholder="password"
             />
             <button type="submit">Login</button>
           </div>
