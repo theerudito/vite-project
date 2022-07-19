@@ -15,7 +15,6 @@ export const Login = () => {
 
   const form = async (data) => {
     const useData = await APIUSER({ data });
-    
     if (data.email === useData.user && data.password === useData.pass) {
       navigate("/home");
     } else {

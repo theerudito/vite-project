@@ -4,7 +4,6 @@ import { Menu } from "./Menu";
 
 export const Home = () => {
   const [posts, setPosts] = useState([]);
-
   useEffect(() => {
     setPosts(POST);
   }, []);
