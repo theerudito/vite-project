@@ -5,12 +5,15 @@ import { Nosotros } from "./Components/Pages/Nosotros";
 import "../src/Components/styles/style.scss";
 
 function App() {
+
+  const dataUser = JSON.parse(localStorage.getItem("users")); 
+
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={dataUser ? <Home /> : <Login/>} />
           <Route path="/nosotros" element={<Nosotros />} />
         </Routes>
       </BrowserRouter>

@@ -3,6 +3,17 @@
   display: flex;
 }
 
+.logout {
+  margin: auto;
+  display: flex;
+  border-radius: 10px;
+  background-color: #554b4b;
+  border: none;
+  &:hover {
+    background-color: #968f8f;
+  }
+}
+
 .containerPrincipal {
   margin: auto;
   display: flex;

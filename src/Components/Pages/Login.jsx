@@ -14,9 +14,12 @@ export const Login = () => {
   } = useForm();
 
   const form = async (data) => {
-    const useData = await APIUSER({ data });
+    const useData = await APIUSER(data);
+
     if (data.email === useData.user && data.password === useData.pass) {
+      localStorage.setItem("users", JSON.stringify(useData));
       navigate("/home");
+      window.location.reload();
     } else {
       alert("Usuario o contraseña incorrectos");
     }
@@ -25,7 +28,7 @@ export const Login = () => {
   return (
     <>
       <div className="containerLogin">
-        <form onClick={handleSubmit(form)}>
+        <form onSubmit={handleSubmit(form)}>
           <div className="containerForm">
             <p>Inicio de Seccion</p>
             <label>Email</label>
